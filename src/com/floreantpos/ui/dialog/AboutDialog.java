@@ -51,7 +51,7 @@ public class AboutDialog extends POSDialog {
 		JLabel logoLabel = new JLabel(IconFactory.getIcon("/icons/", "fp_logo128x128.png")); //$NON-NLS-1$ //$NON-NLS-2$
 		contentPanel.add(logoLabel, BorderLayout.WEST);
 
-		JLabel l = new JLabel("<html><center><h1>FIM POS</h1><br/><h2>Version " + Application.VERSION + "</h2></center></html>"); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel l = new JLabel("<html><center><h1>Floreant POS</h1><br/><h2>Version " + Application.VERSION + "</h2></center></html>"); //$NON-NLS-1$ //$NON-NLS-2$
 		contentPanel.add(l);
 
 		JPanel buttonPanel = new JPanel(new MigLayout("fill"));

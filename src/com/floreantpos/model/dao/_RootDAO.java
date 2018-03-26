@@ -99,6 +99,7 @@ import com.floreantpos.model.UserPermission;
 import com.floreantpos.model.UserType;
 import com.floreantpos.model.VirtualPrinter;
 import com.floreantpos.model.VoidReason;
+import com.floreantpos.model.Waiter;
 import com.floreantpos.model.ZipCodeVsDeliveryCharge;
 
 public abstract class _RootDAO extends com.floreantpos.model.dao._BaseRootDAO {
@@ -163,6 +164,7 @@ public abstract class _RootDAO extends com.floreantpos.model.dao._BaseRootDAO {
 		configuration.addClass(UserPermission.class);
 		configuration.addClass(UserType.class);
 		configuration.addClass(Customer.class);
+                configuration.addClass(Waiter.class);
 		configuration.addClass(PurchaseOrder.class);
 		configuration.addClass(ZipCodeVsDeliveryCharge.class);
 		configuration.addClass(ShopFloor.class);

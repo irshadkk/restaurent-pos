@@ -145,6 +145,8 @@ public class POSConstants {
 	public static final String TEL = Messages.getString("PosMessage.59"); //$NON-NLS-1$
 	public static final String SERVER = Messages.getString("PosMessage.60"); //$NON-NLS-1$
 	public static final String CUSTOMER_SELECTION_BUTTON_TEXT = Messages.getString("CUSTOMER_SELECTION_BUTTON_TEXT"); //$NON-NLS-1$
+        public static final String WAITER_SELECTION_BUTTON_TEXT = Messages.getString("WAITER_SELECTION_BUTTON_TEXT"); //$NON-NLS-1$
+        
 	public static final String GENERAL = Messages.getString("PosMessage.62"); //$NON-NLS-1$
 	public static final String GROUP = Messages.getString("PosMessage.63"); //$NON-NLS-1$
 	public static final String UNGROUP = Messages.getString("UNGROUP"); //$NON-NLS-1$
@@ -353,6 +355,8 @@ public class POSConstants {
 	public static final String ID = Messages.getString("PosMessage.250"); //$NON-NLS-1$
 	public static final String SELECT_COOKING_INSTRUCTION = Messages.getString("PosMessage.251"); //$NON-NLS-1$
 	public static final String SELECT_CUSTOMER = Messages.getString("SELECT_CUSTOMER"); //$NON-NLS-1$
+        public static final String SELECT_WAITER = Messages.getString("SELECT_WAITER"); //$NON-NLS-1$
+        
 	public static final String CURRENCY_SYMBOL_ = Messages.getString("PosMessage.252"); //$NON-NLS-1$
 	public static final String EDIT_ACTUAL_AMOUNT = Messages.getString("PosMessage.253"); //$NON-NLS-1$
 	public static final String MENU_MODIFIER_GROUPS = Messages.getString("PosMessage.254"); //$NON-NLS-1$

@@ -27,6 +27,7 @@ import com.floreantpos.model.OrderType;
 import com.floreantpos.model.ShopTable;
 import com.floreantpos.ui.views.IView;
 import com.floreantpos.util.TicketAlreadyExistsException;
+import com.floreantpos.waiter.WaiterSelector;
 
 public abstract class OrderServiceExtension extends AbstractFloreantPlugin {
 	public abstract String getProductName();
@@ -48,6 +49,8 @@ public abstract class OrderServiceExtension extends AbstractFloreantPlugin {
 	public abstract void createCustomerMenu(JMenu menu);
 
 	public abstract CustomerSelector createNewCustomerSelector();
+        
+        public abstract WaiterSelector createNewWaiterSelector();
 
 	public abstract CustomerSelector createCustomerSelectorView();
 

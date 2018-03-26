@@ -556,7 +556,7 @@ public class Application {
 	}
 
 	public static String getTitle() {
-		return "FIM POS"; //$NON-NLS-1$
+		return "Floreant POS - Version " + VERSION; //$NON-NLS-1$
 	}
 
 	public static ImageIcon getApplicationIcon() {

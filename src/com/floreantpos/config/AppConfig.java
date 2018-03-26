@@ -98,8 +98,7 @@ public class AppConfig {
 	}
 
 	public static String getConnectString() {
-//		return config.getString(CONNECTION_STRING, Database.DERBY_SINGLE.getConnectString("", "", ""));  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-            return config.getString(CONNECTION_STRING, Database.MYSQL.getConnectString("", "", ""));
+		return config.getString(CONNECTION_STRING, Database.DERBY_SINGLE.getConnectString("", "", ""));  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 	
 	public static void setConnectString(String connectionString) {
@@ -143,7 +142,7 @@ public class AppConfig {
 	}
 	
 	public static String getDatabaseProviderName() {
-		return config.getString(DATABASE_PROVIDER_NAME, Database.MYSQL.getProviderName()); //$NON-NLS-1$
+		return config.getString(DATABASE_PROVIDER_NAME, Database.DERBY_SINGLE.getProviderName()); //$NON-NLS-1$
 	}
 	
 	public static Database getDefaultDatabase() {

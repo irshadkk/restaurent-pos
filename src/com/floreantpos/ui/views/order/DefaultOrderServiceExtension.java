@@ -40,6 +40,7 @@ import com.floreantpos.ui.views.IView;
 import com.floreantpos.util.POSUtil;
 import com.floreantpos.util.PosGuiUtil;
 import com.floreantpos.util.TicketAlreadyExistsException;
+import com.floreantpos.waiter.WaiterSelector;
 
 public class DefaultOrderServiceExtension extends OrderServiceExtension {
 
@@ -176,6 +177,11 @@ public class DefaultOrderServiceExtension extends OrderServiceExtension {
 	public CustomerSelector createNewCustomerSelector() {
 		return null;
 	}
+        
+        @Override
+	public WaiterSelector createNewWaiterSelector() {
+		return null;
+	} 
 
 	@Override
 	public CustomerSelector createCustomerSelectorView() {

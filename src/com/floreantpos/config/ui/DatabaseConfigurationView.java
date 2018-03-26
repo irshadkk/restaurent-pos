@@ -139,10 +139,10 @@ public class DatabaseConfigurationView extends ConfigurationView implements Acti
 			public void actionPerformed(ActionEvent e) {
 				Database selectedDb = (Database) databaseCombo.getSelectedItem();
 
-//				if (selectedDb == Database.DERBY_SINGLE) {
-//					setFieldsVisible(false);
-//					return;
-//				}
+				if (selectedDb == Database.DERBY_SINGLE) {
+					setFieldsVisible(false);
+					return;
+				}
 
 				setFieldsVisible(true);
 
@@ -280,12 +280,12 @@ public class DatabaseConfigurationView extends ConfigurationView implements Acti
 		tfUserName.setText(AppConfig.getDatabaseUser());
 		tfPassword.setText(AppConfig.getDatabasePassword());
 
-//		if (selectedDb == Database.DERBY_SINGLE) {
-//			setFieldsVisible(false);
-//		}
-//		else {
+		if (selectedDb == Database.DERBY_SINGLE) {
+			setFieldsVisible(false);
+		}
+		else {
 			setFieldsVisible(true);
-//		}
+		}
 
 		setInitialized(true);
 	}

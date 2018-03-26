@@ -123,7 +123,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 		orderServiceExtension = (OrderServiceExtension) ExtensionManager.getPlugin(OrderServiceExtension.class);
 
 		if (orderServiceExtension == null) {
-			btnAssignDriver.setEnabled(false);
+			btnAssignDriver.setEnabled(true);
 
 			orderServiceExtension = new DefaultOrderServiceExtension();
 		}
@@ -146,7 +146,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 	 */
 	// <editor-fold defaultstate="collapsed" desc=" Generated Code
 	// <editor-fold defaultstate="collapsed"
-	// desc=" Generated Code ">//GEN-BEGIN:initComponents
+	// desc=" Generated Code ">                          
 	private void initComponents() {
 		setLayout(new java.awt.BorderLayout(10, 10));
 
@@ -372,6 +372,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 			}
 
 			User assignedDriver = ticket.getAssignedDriver();
+                        
 			if (assignedDriver != null) {
 				int option = JOptionPane.showOptionDialog(Application.getPosWindow(), Messages.getString("SwitchboardView.9"), POSConstants.CONFIRM, //$NON-NLS-1$
 						JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
@@ -658,7 +659,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 		ticketList.updateTicketList();
 	}
 
-	// Variables declaration - do not modify//GEN-BEGIN:variables
+	// Variables declaration - do not modify                     
 
 	//	private PosButton btnBarTab = new PosButton(POSConstants.BAR_TAB_BUTTON_TEXT);
 

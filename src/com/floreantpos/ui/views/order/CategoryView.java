@@ -74,7 +74,7 @@ public class CategoryView extends SelectionView implements ActionListener {
 		super(com.floreantpos.POSConstants.CATEGORIES, PosUIManager.getSize(100), PosUIManager.getSize(80));
 
 		categoryButtonGroup = new ButtonGroup();
-		setPreferredSize(new Dimension(PosUIManager.getSize(120, 100)));
+		setPreferredSize(new Dimension(PosUIManager.getSize(250, 100)));
 	}
 
 	public void initialize() {
@@ -158,7 +158,7 @@ public class CategoryView extends SelectionView implements ActionListener {
 
 	@Override
 	protected LayoutManager createButtonPanelLayout() {
-		return new GridLayout(0, 1, 2, 5);
+		return new GridLayout(8, 4, 2, 2);
 	}
 
 	public void addCategorySelectionListener(CategorySelectionListener listener) {
