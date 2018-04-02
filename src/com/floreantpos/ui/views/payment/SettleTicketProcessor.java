@@ -511,9 +511,9 @@ public class SettleTicketProcessor implements CardInputListener {
 				SwipeCardDialog swipeCardDialog = (SwipeCardDialog) inputter;
 				String cardString = swipeCardDialog.getCardString();
 
-				if (StringUtils.isEmpty(cardString) || cardString.length() < 16) {
-					throw new RuntimeException(Messages.getString("SettleTicketDialog.16")); //$NON-NLS-1$
-				}
+//				if (StringUtils.isEmpty(cardString) || cardString.length() < 16) {
+//					throw new RuntimeException(Messages.getString("SettleTicketDialog.16")); //$NON-NLS-1$
+//				}
 
 				if (!confirmPayment()) {
 					return;
@@ -525,12 +525,12 @@ public class SettleTicketProcessor implements CardInputListener {
 				transaction.setCardReader(CardReader.SWIPE.name());
 				setTransactionAmounts(transaction);
 
-				if (ticket.getOrderType().isPreAuthCreditCard()) {//OK
-					cardProcessor.preAuth(transaction);
-				}
-				else {
-					cardProcessor.chargeAmount(transaction);
-				}
+//				if (ticket.getOrderType().isPreAuthCreditCard()) {//OK
+//					cardProcessor.preAuth(transaction);
+//				}
+//				else {
+//					cardProcessor.chargeAmount(transaction);
+//				}
 
 				settleTicket(transaction);
 			}
@@ -547,12 +547,12 @@ public class SettleTicketProcessor implements CardInputListener {
 				setTransactionAmounts(transaction);
 
 				//cardProcessor.preAuth(transaction);
-				if (ticket.getOrderType().isPreAuthCreditCard()) {//OK
-					cardProcessor.preAuth(transaction);
-				}
-				else {
-					cardProcessor.chargeAmount(transaction);
-				}
+//				if (ticket.getOrderType().isPreAuthCreditCard()) {//OK
+//					cardProcessor.preAuth(transaction);
+//				}
+//				else {
+//					cardProcessor.chargeAmount(transaction);
+//				}
 
 				settleTicket(transaction);
 			}

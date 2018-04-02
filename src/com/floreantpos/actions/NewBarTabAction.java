@@ -146,9 +146,9 @@ public class NewBarTabAction extends AbstractAction implements CardInputListener
 				SwipeCardDialog swipeCardDialog = (SwipeCardDialog) inputter;
 				String cardString = swipeCardDialog.getCardString();
 
-				if (StringUtils.isEmpty(cardString) || cardString.length() < 16) {
-					throw new RuntimeException(Messages.getString("SettleTicketDialog.16")); //$NON-NLS-1$
-				}
+//				if (StringUtils.isEmpty(cardString) || cardString.length() < 16) {
+//					throw new RuntimeException(Messages.getString("SettleTicketDialog.16")); //$NON-NLS-1$
+//				}
 
 				transaction.setCardType(paymentType.getDisplayString());
 				transaction.setCardTrack(cardString);
@@ -156,12 +156,12 @@ public class NewBarTabAction extends AbstractAction implements CardInputListener
 				transaction.setCardMerchantGateway(paymentGateway.getProductName());
 				transaction.setCardReader(CardReader.SWIPE.name());
 
-				if (ticket.getOrderType().isPreAuthCreditCard()) {
-					cardProcessor.preAuth(transaction);
-				}
-				else {
-					cardProcessor.chargeAmount(transaction);
-				}
+//				if (ticket.getOrderType().isPreAuthCreditCard()) {
+//					cardProcessor.preAuth(transaction);
+//				}
+//				else {
+//					cardProcessor.chargeAmount(transaction);
+//				}
 
 				saveTicket(transaction);
 
@@ -177,7 +177,7 @@ public class NewBarTabAction extends AbstractAction implements CardInputListener
 				transaction.setCardExpMonth(mDialog.getExpMonth());
 				transaction.setCardExpYear(mDialog.getExpYear());
 
-				cardProcessor.preAuth(transaction);
+//				cardProcessor.preAuth(transaction);
 
 				saveTicket(transaction);
 			}

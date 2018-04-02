@@ -651,9 +651,9 @@ public class GroupSettleTicketDialog extends POSDialog implements CardInputListe
 				SwipeCardDialog swipeCardDialog = (SwipeCardDialog) inputter;
 				String cardString = swipeCardDialog.getCardString();
 
-				if (StringUtils.isEmpty(cardString) || cardString.length() < 16) {
-					throw new RuntimeException(Messages.getString("SettleTicketDialog.16")); //$NON-NLS-1$
-				}
+//				if (StringUtils.isEmpty(cardString) || cardString.length() < 16) {
+//					throw new RuntimeException(Messages.getString("SettleTicketDialog.16")); //$NON-NLS-1$
+//				}
 
 				if (!confirmPayment()) {
 					return;
@@ -722,12 +722,12 @@ public class GroupSettleTicketDialog extends POSDialog implements CardInputListe
 				cardTransaction.setTicket(ticket);
 				setTransactionAmounts(cardTransaction);
 
-				if (ticket.getOrderType().isPreAuthCreditCard()) {// authorize onlly do not capture
-					cardProcessor.preAuth(transaction);
-				}
-				else {
-					cardProcessor.chargeAmount(transaction);
-				}
+//				if (ticket.getOrderType().isPreAuthCreditCard()) {// authorize onlly do not capture
+//					cardProcessor.preAuth(transaction);
+//				}
+//				else {
+//					cardProcessor.chargeAmount(transaction);
+//				}
 
 				confirmLoyaltyDiscount(ticket);
 

@@ -106,6 +106,7 @@ public abstract class BaseTicket implements Comparable, Serializable {
     protected java.lang.Double deliveryCharge;
     protected java.lang.Integer customerId;
     protected java.lang.Integer waiterId;
+    protected java.lang.Integer deliveryDriverId;
     protected java.lang.String deliveryAddress;
     protected java.lang.Boolean customerWillPickup;
     protected java.lang.String extraDeliveryInfo;
@@ -616,6 +617,17 @@ public abstract class BaseTicket implements Comparable, Serializable {
     public void setWaiterId(Integer waiterId) {
         this.waiterId = waiterId;
     }
+
+    public Integer getDeliveryDriverId() {
+        return deliveryDriverId;
+    }
+
+    public void setDeliveryDriverId(Integer deliveryDriverId) {
+        this.deliveryDriverId = deliveryDriverId;
+    }
+
+    
+    
 
     /**
      * Return the value associated with the column: DELIVERY_ADDRESS
