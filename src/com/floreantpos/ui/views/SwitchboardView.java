@@ -122,7 +122,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
         orderServiceExtension = (OrderServiceExtension) ExtensionManager.getPlugin(OrderServiceExtension.class);
 
         if (orderServiceExtension == null) {
-            btnAssignDriver.setEnabled(true);
+//            btnAssignDriver.setEnabled(true);
 
             orderServiceExtension = new DefaultOrderServiceExtension();
         }
@@ -163,11 +163,11 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 
         ticketsAndActivityPanel.add(activityPanel, java.awt.BorderLayout.SOUTH);
 
-        btnAssignDriver.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                doAssignDriver();
-            }
-        });
+//        btnAssignDriver.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                doAssignDriver();
+//            }
+//        });
 
         btnCloseOrder.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -288,7 +288,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
             secondRowButtonPanel.getContentPane().add(btnReopenTicket);
             secondRowButtonPanel.getContentPane().add(btnVoidTicket);
             secondRowButtonPanel.getContentPane().add(btnRefundTicket);
-            secondRowButtonPanel.getContentPane().add(btnAssignDriver);
+//            secondRowButtonPanel.getContentPane().add(btnAssignDriver);
         } else {
             firstRowButtonPanel.add(btnOrderInfo);
             firstRowButtonPanel.add(btnEditTicket);
@@ -298,7 +298,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
             secondRowButtonPanel.getContentPane().add(btnReopenTicket);
             secondRowButtonPanel.getContentPane().add(btnVoidTicket);
             secondRowButtonPanel.getContentPane().add(btnRefundTicket);
-            secondRowButtonPanel.getContentPane().add(btnAssignDriver);
+//            secondRowButtonPanel.getContentPane().add(btnAssignDriver);
         }
 
         innerActivityPanel.add(firstRowButtonPanel);
@@ -400,7 +400,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
         if (!dialog.isCanceled()) {
 //            currentTicket.setCustomer(dialog.getSelectedCustomer());
             currentTicket.setWaiter(dialog.getSelectedWaiter());
-            btnAssignDriver.setText("<html><body><center>ASSIGNED DRIVER<br>\"" + dialog.getSelectedWaiter().getFirstName() + "\"</center></body></html>");
+//            btnAssignDriver.setText("<html><body><center>ASSIGNED DRIVER<br>\"" + dialog.getSelectedWaiter().getFirstName() + "\"</center></body></html>");
 
         }
     }
@@ -683,7 +683,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
     private PosButton btnVoidTicket = new PosButton(POSConstants.VOID_TICKET_BUTTON_TEXT);
     private PosButton btnRefundTicket = new PosButton(POSConstants.REFUND_BUTTON_TEXT, new RefundAction(this));
 
-    private PosButton btnAssignDriver = new PosButton(POSConstants.ASSIGN_DRIVER_BUTTON_TEXT);
+//    private PosButton btnAssignDriver = new PosButton(POSConstants.ASSIGN_DRIVER_BUTTON_TEXT);
     private PosButton btnCloseOrder = new PosButton(POSConstants.CLOSE_ORDER_BUTTON_TEXT);
     //private PosBlinkButton btnRefreshTicketList = new PosBlinkButton(Messages.getString(Messages.getString("SwitchboardView.21"))); //NON-NLS-1$ //$NON-NLS-1$
 
