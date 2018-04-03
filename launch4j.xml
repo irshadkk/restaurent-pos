@@ -3,7 +3,7 @@
   <dontWrapJar>true</dontWrapJar>
   <headerType>gui</headerType>
   <jar>.</jar>
-  <outfile>/home/mshahriar/workspace/floreantpos/target/floreantpos-bin/floreantpos/floreantpos.exe</outfile>
+  <outfile>C:/PERSONAL/Projects/fr/restaurent-pos/target/floreantpos-bin/floreantpos/floreantpos.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>

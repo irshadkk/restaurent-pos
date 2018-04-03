@@ -131,7 +131,7 @@
 		<band splitType="Stretch"/>
 	</pageFooter>
 	<summary>
-		<band height="12" splitType="Stretch">
+		<band height="28" splitType="Stretch">
 			<staticText>
 				<reportElement x="114" y="0" width="39" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>

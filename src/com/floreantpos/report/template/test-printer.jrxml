@@ -35,13 +35,13 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="2" width="226" height="20"/>
+				<reportElement x="0" y="2" width="212" height="20"/>
 				<box topPadding="5" leftPadding="3"/>
 				<textElement textAlignment="Center"/>
 				<text><![CDATA[Congratulation, printer test successful]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="84" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="84" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -59,7 +59,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{data}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="101" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="101" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -67,7 +67,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="118" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="118" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -75,7 +75,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="135" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="135" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -83,7 +83,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="152" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="152" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -91,7 +91,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="169" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="169" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -99,7 +99,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="186" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="186" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -107,7 +107,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="203" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="203" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -115,7 +115,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="220" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="220" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
@@ -123,7 +123,7 @@
 				<text><![CDATA[0123456789012345678901234567890123456789]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="0" y="237" width="226" height="17"/>
+				<reportElement positionType="Float" x="12" y="237" width="200" height="17"/>
 				<box leftPadding="1"/>
 				<textElement>
 					<font size="10"/>
