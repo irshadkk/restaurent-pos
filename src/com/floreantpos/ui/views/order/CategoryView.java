@@ -158,7 +158,7 @@ public class CategoryView extends SelectionView implements ActionListener {
 
 	@Override
 	protected LayoutManager createButtonPanelLayout() {
-		return new GridLayout(8, 4, 2, 2);
+		return new GridLayout(5, 3, 2, 2);
 	}
 
 	public void addCategorySelectionListener(CategorySelectionListener listener) {

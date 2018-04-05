@@ -377,7 +377,8 @@ public class DrawerUtil {
 		//printToThePort();
 		initialize();
 		try {
-			print((char) 13); //added line feed
+//			print((char) 13); //added line feed
+                        print("Welcome to ROYAL TEA BREAK");
 			serialPort.writeBytes(customerDisplayMessage.getBytes());
 
 			serialPort.closePort();//Close serial port

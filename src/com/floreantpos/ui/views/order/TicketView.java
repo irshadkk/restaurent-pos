@@ -760,7 +760,7 @@ public class TicketView extends JPanel {
 
 		String line = String.format("%-1s %-12s %4s", quantity, ticketItems, itemPrice);
 
-		String total = "TOTAL" + CurrencyUtil.getCurrencySymbol();
+		String total = " TOTAL" + CurrencyUtil.getCurrencySymbol();
 		String line2 = String.format("%-6s %13s", total, totalPrice);
 
 		return line + line2;
