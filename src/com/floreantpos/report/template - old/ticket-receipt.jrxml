@@ -392,7 +392,7 @@
 		<band splitType="Prevent"/>
 	</lastPageFooter>
 	<summary>
-		<band height="338" splitType="Stretch">
+		<band height="335" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="staticText-8" x="22" y="58" width="114" height="13">
 					<printWhenExpression><![CDATA[$P{tipAmount}!=null]]></printWhenExpression>
@@ -741,7 +741,7 @@
 				<text><![CDATA[Sign :                              ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="36" y="314" width="100" height="20"/>
+				<reportElement x="36" y="313" width="100" height="20"/>
 				<textElement/>
 				<text><![CDATA[***************************]]></text>
 			</staticText>

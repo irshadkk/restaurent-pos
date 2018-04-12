@@ -4,7 +4,7 @@
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.6105100000000008"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="217"/>
+	<property name="ireport.y" value="334"/>
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
@@ -567,7 +567,7 @@
 				<text><![CDATA[>CASH TO DEPOSIT]]></text>
 			</staticText>
 			<subreport>
-				<reportElement x="0" y="494" width="192" height="21"/>
+				<reportElement x="0" y="494" width="222" height="21"/>
 				<subreportParameter name="totalVoid">
 					<subreportParameterExpression><![CDATA[$P{totalVoid}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -575,105 +575,105 @@
 				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{subreportParameter}]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement x="116" y="27" width="76" height="15"/>
+				<reportElement x="123" y="27" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{netSales})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="42" width="76" height="15"/>
+				<reportElement x="123" y="42" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{salesTax})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="57" width="76" height="15"/>
+				<reportElement x="123" y="57" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{totalRevenue})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="72" width="76" height="15"/>
+				<reportElement x="123" y="72" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{chargedTips})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="90" width="76" height="15"/>
+				<reportElement x="123" y="90" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{grossReceipts})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="112" width="76" height="15"/>
+				<reportElement x="123" y="112" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="127" width="76" height="15"/>
+				<reportElement x="123" y="127" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{creditCardReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="142" width="76" height="15"/>
+				<reportElement x="123" y="142" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{debitCardReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="172" width="76" height="15"/>
+				<reportElement x="123" y="172" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{giftCertChangeAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="157" width="76" height="15"/>
+				<reportElement x="123" y="157" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{giftCertReturnAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="202" width="76" height="15"/>
+				<reportElement x="123" y="202" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashBack})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="219" width="76" height="15"/>
+				<reportElement x="123" y="219" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{receiptDifferential})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="241" width="76" height="15"/>
+				<reportElement x="123" y="241" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{chargedTips})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="256" width="76" height="15"/>
+				<reportElement x="123" y="256" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsPaid})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="273" width="76" height="15"/>
+				<reportElement x="123" y="273" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
@@ -693,68 +693,68 @@
 				<text><![CDATA[CASH BALANCE]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="116" y="318" width="76" height="15"/>
+				<reportElement x="123" y="318" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="333" width="76" height="15"/>
+				<reportElement x="123" y="333" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsPaid})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="348" width="76" height="15"/>
+				<reportElement x="123" y="348" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{payOutAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="380" width="76" height="15"/>
+				<reportElement x="123" y="380" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashBack})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="395" width="76" height="15"/>
+				<reportElement x="123" y="395" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{beginCash})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="410" width="76" height="15"/>
+				<reportElement x="123" y="410" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{drawerBleedAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="427" width="76" height="15"/>
+				<reportElement x="123" y="427" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{drawerAccountable})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="116" y="442" width="76" height="15"/>
+				<reportElement x="123" y="442" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashToDeposit})]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement x="-1" y="464" width="193" height="26"/>
+				<reportElement x="-1" y="464" width="222" height="26"/>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{currencyBalances})]]></dataSourceExpression>
 				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{currencyBalanceReport}]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement x="116" y="187" width="76" height="15"/>
+				<reportElement x="123" y="187" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
@@ -774,7 +774,7 @@
 				<text><![CDATA[+REFUND]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="116" y="364" width="76" height="15"/>
+				<reportElement x="123" y="364" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>

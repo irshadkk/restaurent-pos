@@ -370,15 +370,17 @@ public class DrawerUtil {
 			logger.error(ex);
 		}
 	}
-
+        public static String welcomeMessage="Welcome to ROYAL TEA BREAK";
 	public static void setCustomerDisplayMessage(String portName, String customerDisplayMessage) {
 		serialPort = new SerialPort(portName);
 
 		//printToThePort();
 		initialize();
 		try {
-//			print((char) 13); //added line feed
-                        print("Welcome to ROYAL TEA BREAK");
+			print((char) 13); //added line feed
+//                        print("Welcome to ROYAL TEA BREAK");
+                        
+                        serialPort.writeBytes(welcomeMessage.getBytes());
 			serialPort.writeBytes(customerDisplayMessage.getBytes());
 
 			serialPort.closePort();//Close serial port

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales_summary_report1" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales_summary_report1" pageWidth="595" pageHeight="1200" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.0"/>
@@ -68,16 +68,95 @@
 			<band splitType="Stretch"/>
 		</groupHeader>
 		<groupFooter>
-			<band height="10" splitType="Stretch"/>
+			<band height="36" splitType="Stretch">
+				<staticText>
+					<reportElement key="staticText-51" x="-10" y="7" width="44" height="15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Guest]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-52" x="38" y="7" width="45" height="15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Entre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-53" x="87" y="7" width="60" height="15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Sales]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-54" x="200" y="7" width="44" height="15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[AvgGst]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-55" x="247" y="7" width="37" height="15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[%]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-56" x="151" y="7" width="45" height="15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[AvgChk]]></text>
+				</staticText>
+			</band>
 		</groupFooter>
 	</group>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="400" splitType="Stretch">
+		<band height="660" splitType="Stretch">
 			<subreport isUsingCache="true">
-				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="535" height="28"/>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="312" height="28"/>
 				<subreportParameter name="restaurantName">
 					<subreportParameterExpression><![CDATA[$P{restaurantName}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -133,7 +212,7 @@
 				<text><![CDATA[Type:]]></text>
 			</staticText>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement key="textField-9" positionType="Float" mode="Transparent" x="1" y="31" width="534" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<reportElement key="textField-9" positionType="Float" mode="Transparent" x="1" y="31" width="311" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
 					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
 				</textElement>
@@ -271,7 +350,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{centre}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-17" positionType="Float" mode="Transparent" x="1" y="129" width="534" height="17" backcolor="#FFFFFF"/>
+				<reportElement key="staticText-17" positionType="Float" mode="Transparent" x="1" y="129" width="246" height="17" backcolor="#FFFFFF"/>
 				<box bottomPadding="0">
 					<pen lineStyle="Dotted" lineColor="#999999"/>
 					<topPen lineStyle="Dotted" lineColor="#999999"/>
@@ -350,7 +429,7 @@
 				<text><![CDATA[AVG Guest]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-25" positionType="Float" x="270" y="156" width="75" height="15"/>
+				<reportElement key="staticText-25" positionType="Float" x="29" y="379" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -363,7 +442,7 @@
 				<text><![CDATA[Tables:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-27" positionType="Float" x="270" y="171" width="75" height="15"/>
+				<reportElement key="staticText-27" positionType="Float" x="29" y="394" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -376,7 +455,7 @@
 				<text><![CDATA[Check Count:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-28" positionType="Float" x="270" y="186" width="75" height="15"/>
+				<reportElement key="staticText-28" positionType="Float" x="29" y="409" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -389,7 +468,7 @@
 				<text><![CDATA[Guest/Checks:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-29" positionType="Float" x="270" y="201" width="75" height="15"/>
+				<reportElement key="staticText-29" positionType="Float" x="29" y="424" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -402,7 +481,7 @@
 				<text><![CDATA[TrnOvr Time:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-30" positionType="Float" x="270" y="216" width="75" height="15"/>
+				<reportElement key="staticText-30" positionType="Float" x="29" y="439" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -493,7 +572,7 @@
 				<text><![CDATA[NTax Checks]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-37" positionType="Float" x="270" y="231" width="75" height="15"/>
+				<reportElement key="staticText-37" positionType="Float" x="29" y="454" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -506,7 +585,7 @@
 				<text><![CDATA[OPEN Amount:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-38" positionType="Float" x="270" y="246" width="75" height="15"/>
+				<reportElement key="staticText-38" positionType="Float" x="29" y="469" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -519,7 +598,7 @@
 				<text><![CDATA[VOID Amt(+Tx):]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-39" positionType="Float" x="270" y="261" width="75" height="15"/>
+				<reportElement key="staticText-39" positionType="Float" x="29" y="484" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -532,7 +611,7 @@
 				<text><![CDATA[PAID Checks:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-40" positionType="Float" x="270" y="276" width="75" height="15"/>
+				<reportElement key="staticText-40" positionType="Float" x="29" y="499" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -545,7 +624,7 @@
 				<text><![CDATA[TRNG Amount:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-41" positionType="Float" x="270" y="291" width="75" height="15"/>
+				<reportElement key="staticText-41" positionType="Float" x="29" y="514" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -558,7 +637,7 @@
 				<text><![CDATA[ROPN Amount:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-42" positionType="Float" x="270" y="306" width="75" height="15"/>
+				<reportElement key="staticText-42" positionType="Float" x="29" y="529" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -610,7 +689,7 @@
 				<text><![CDATA[Labor Sales]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-46" positionType="Float" x="270" y="321" width="75" height="15"/>
+				<reportElement key="staticText-46" positionType="Float" x="29" y="544" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -623,7 +702,7 @@
 				<text><![CDATA[Merge Amount:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-47" positionType="Float" x="270" y="336" width="75" height="15"/>
+				<reportElement key="staticText-47" positionType="Float" x="29" y="559" width="75" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -634,19 +713,6 @@
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
 				<text><![CDATA[Labor:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-48" positionType="Float" x="270" y="351" width="75" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement>
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[Labor Cost:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-18" positionType="Float" x="120" y="156" width="59" height="15"/>
@@ -704,7 +770,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{AVGGuest}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-24" positionType="Float" x="359" y="156" width="61" height="15"/>
+				<reportElement key="textField-24" positionType="Float" x="118" y="379" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -715,7 +781,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{Tables}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-25" positionType="Float" x="359" y="171" width="61" height="15"/>
+				<reportElement key="textField-25" positionType="Float" x="118" y="394" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -726,7 +792,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{CheckCount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-26" positionType="Float" x="359" y="186" width="61" height="15"/>
+				<reportElement key="textField-26" positionType="Float" x="118" y="409" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -737,7 +803,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{GuestPerChecks}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-27" positionType="Float" x="359" y="201" width="61" height="15"/>
+				<reportElement key="textField-27" positionType="Float" x="118" y="424" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -748,7 +814,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{TrnOvrTime}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-28" positionType="Float" x="359" y="216" width="61" height="15"/>
+				<reportElement key="textField-28" positionType="Float" x="118" y="439" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -858,7 +924,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{LaborSales}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-46" positionType="Float" x="359" y="231" width="61" height="15"/>
+				<reportElement key="textField-46" positionType="Float" x="118" y="454" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -869,7 +935,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{OPENAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-47" positionType="Float" x="359" y="246" width="61" height="15"/>
+				<reportElement key="textField-47" positionType="Float" x="118" y="469" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -880,7 +946,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{VOIDAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-48" positionType="Float" x="359" y="261" width="61" height="15"/>
+				<reportElement key="textField-48" positionType="Float" x="118" y="484" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -891,7 +957,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{PAIDChecks}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-49" positionType="Float" x="359" y="276" width="61" height="15"/>
+				<reportElement key="textField-49" positionType="Float" x="118" y="499" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -902,7 +968,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{TRNGAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-50" positionType="Float" x="359" y="291" width="61" height="15"/>
+				<reportElement key="textField-50" positionType="Float" x="118" y="514" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -913,7 +979,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{ROPNAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-51" positionType="Float" x="359" y="306" width="61" height="15"/>
+				<reportElement key="textField-51" positionType="Float" x="118" y="529" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -924,7 +990,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{NTaxAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-52" positionType="Float" x="359" y="321" width="61" height="15"/>
+				<reportElement key="textField-52" positionType="Float" x="118" y="544" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -935,7 +1001,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{MergeAmount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-53" positionType="Float" x="359" y="336" width="61" height="15"/>
+				<reportElement key="textField-53" positionType="Float" x="118" y="559" width="61" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -944,17 +1010,6 @@
 				</box>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{Labor}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-54" positionType="Float" x="359" y="351" width="61" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{LaborCost}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="staticText-58" positionType="Float" x="105" y="156" width="15" height="15"/>
@@ -1139,7 +1194,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-72" positionType="Float" x="344" y="156" width="15" height="15"/>
+				<reportElement key="staticText-72" positionType="Float" x="103" y="379" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1152,7 +1207,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-73" positionType="Float" x="344" y="171" width="15" height="15"/>
+				<reportElement key="staticText-73" positionType="Float" x="103" y="394" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1165,7 +1220,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-74" positionType="Float" x="344" y="186" width="15" height="15"/>
+				<reportElement key="staticText-74" positionType="Float" x="103" y="409" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1178,7 +1233,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-75" positionType="Float" x="344" y="201" width="15" height="15"/>
+				<reportElement key="staticText-75" positionType="Float" x="103" y="424" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1191,7 +1246,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-76" positionType="Float" x="344" y="216" width="15" height="15"/>
+				<reportElement key="staticText-76" positionType="Float" x="103" y="439" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1204,7 +1259,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-77" positionType="Float" x="344" y="231" width="15" height="15"/>
+				<reportElement key="staticText-77" positionType="Float" x="103" y="454" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1217,7 +1272,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-78" positionType="Float" x="344" y="246" width="15" height="15"/>
+				<reportElement key="staticText-78" positionType="Float" x="103" y="469" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1230,7 +1285,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-79" positionType="Float" x="344" y="261" width="15" height="15"/>
+				<reportElement key="staticText-79" positionType="Float" x="103" y="484" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1243,7 +1298,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-80" positionType="Float" x="344" y="276" width="15" height="15"/>
+				<reportElement key="staticText-80" positionType="Float" x="103" y="499" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1256,7 +1311,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-81" positionType="Float" x="344" y="291" width="15" height="15"/>
+				<reportElement key="staticText-81" positionType="Float" x="103" y="514" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1269,7 +1324,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-82" positionType="Float" x="344" y="306" width="15" height="15"/>
+				<reportElement key="staticText-82" positionType="Float" x="103" y="529" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1282,7 +1337,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-83" positionType="Float" x="344" y="321" width="15" height="15"/>
+				<reportElement key="staticText-83" positionType="Float" x="103" y="544" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1295,7 +1350,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-84" positionType="Float" x="344" y="336" width="15" height="15"/>
+				<reportElement key="staticText-84" positionType="Float" x="103" y="559" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1308,7 +1363,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-85" positionType="Float" x="344" y="351" width="15" height="15"/>
+				<reportElement key="staticText-85" positionType="Float" x="103" y="574" width="15" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1320,6 +1375,17 @@
 				</textElement>
 				<text><![CDATA[:]]></text>
 			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-54" positionType="Float" x="117" y="574" width="61" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LaborCost}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>
@@ -1341,7 +1407,7 @@
 				<text><![CDATA[Daypart]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-50" x="192" y="0" width="45" height="15"/>
+				<reportElement key="staticText-50" x="159" y="0" width="45" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1354,85 +1420,7 @@
 				<text><![CDATA[Check]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-51" x="241" y="0" width="44" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right">
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[Guest]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="289" y="0" width="45" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right">
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[Entre]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-53" x="338" y="0" width="60" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right">
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[Sales]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-54" x="451" y="0" width="44" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right">
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[AvgGst]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-55" x="498" y="0" width="37" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right">
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[%]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-56" x="402" y="0" width="45" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right">
-					<font isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[AvgChk]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-86" x="96" y="0" width="92" height="15"/>
+				<reportElement key="staticText-86" x="78" y="0" width="92" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1447,6 +1435,19 @@
 			<line>
 				<reportElement key="line-1" x="1" y="15" width="534" height="1"/>
 			</line>
+			<staticText>
+				<reportElement key="staticText-48" positionType="Float" x="28" y="-87" width="75" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Labor Cost:]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
@@ -1465,40 +1466,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{DayPart}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-38" x="241" y="0" width="44" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{Guest}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-39" x="289" y="0" width="45" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{Enter}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-40" x="338" y="0" width="60" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{Sales}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-42" x="192" y="0" width="45" height="15"/>
+				<reportElement key="textField-42" x="158" y="0" width="45" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1509,40 +1477,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{Check}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-43" x="402" y="0" width="45" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{AvgChk}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-44" x="451" y="0" width="44" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{AvgGst}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-45" x="498" y="0" width="37" height="15"/>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{Percentage}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="false">
-				<reportElement key="textField-55" x="96" y="0" width="92" height="15"/>
+				<reportElement key="textField-55" x="78" y="0" width="92" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1558,16 +1493,16 @@
 		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="30" splitType="Stretch">
+		<band height="273" splitType="Stretch">
 			<staticText>
-				<reportElement x="92" y="14" width="350" height="16"/>
+				<reportElement x="-3" y="14" width="166" height="16"/>
 				<textElement textAlignment="Center">
 					<font size="9"/>
 				</textElement>
 				<text><![CDATA[Generated by FIM POS]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-10" x="442" y="14" width="93" height="16"/>
+				<reportElement key="textField-10" x="170" y="14" width="70" height="16"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1576,6 +1511,72 @@
 				</box>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression class="java.lang.String"><![CDATA["Page: " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-38" x="-10" y="-15" width="44" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Guest}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-39" x="38" y="-15" width="45" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Enter}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-40" x="87" y="-15" width="60" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Sales}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-43" x="151" y="-15" width="45" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AvgChk}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-44" x="200" y="-15" width="44" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AvgGst}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-45" x="247" y="-15" width="37" height="15"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Percentage}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
