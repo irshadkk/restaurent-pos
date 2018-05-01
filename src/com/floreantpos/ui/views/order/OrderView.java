@@ -996,14 +996,24 @@ public class OrderView extends ViewPanel implements PaymentListener, TicketEditL
     }
 
     private void showDefaultView() {
+        /*enable this block for supermarket view
+        removeAll();
+        setVisibleButtonForOrderView();
+        ticketSummaryView.setVisible(false); 
+        add(ticketViewContainer, java.awt.BorderLayout.CENTER); 
+        add(actionButtonPanel, java.awt.BorderLayout.SOUTH);
+        */
+        
+        
+        /*enable this block for restaurent view*/
         removeAll();
         setVisibleButtonForOrderView();
         ticketSummaryView.setVisible(false);
-//        add(categoryView, java.awt.BorderLayout.EAST);
-//        add(ticketViewContainer, java.awt.BorderLayout.WEST);
-        add(ticketViewContainer, java.awt.BorderLayout.CENTER);
-//        add(midContainer, java.awt.BorderLayout.CENTER);
+        add(categoryView, java.awt.BorderLayout.EAST);
+        add(ticketViewContainer, java.awt.BorderLayout.WEST);
+        add(midContainer, java.awt.BorderLayout.CENTER);
         add(actionButtonPanel, java.awt.BorderLayout.SOUTH);
+        
     }
 
     public void setCurrentTicket(Ticket newTicket) {
