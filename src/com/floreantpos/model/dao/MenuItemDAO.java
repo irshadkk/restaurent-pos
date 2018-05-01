@@ -42,6 +42,7 @@ import com.floreantpos.model.MenuItem;
 import com.floreantpos.model.MenuItemModifierGroup;
 import com.floreantpos.model.OrderType;
 import com.floreantpos.model.Terminal;
+import org.hibernate.Query;
 
 public class MenuItemDAO extends BaseMenuItemDAO {
 
@@ -362,6 +363,18 @@ public class MenuItemDAO extends BaseMenuItemDAO {
 				return null;
 			}
 			return (MenuItem) result.get(0);
+		} finally {
+			closeSession(session);
+		}
+	}
+        public List<MenuItem> getAllItemNames() {
+		Session session = null;
+		Criteria criteria = null;
+		try {
+			session = createNewSession();
+                        Query query = session.createQuery("from MenuItem");
+                        List<MenuItem> list = query.list();   
+			return list;
 		} finally {
 			closeSession(session);
 		}

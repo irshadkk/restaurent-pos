@@ -176,9 +176,9 @@ public class TicketView extends JPanel {
                 if (dialog.isCanceled()) {
                     return;
                 }
-
+                
                 txtSearchItem.requestFocus();
-
+                System.err.println("dialog.getValue()=="+dialog.getValue());
                 if (!addMenuItemByBarcode(dialog.getValue())) {
                     if (!addMenuItemByItemId(dialog.getValue())) {
                         if (!addMenuItemByName(dialog.getValue())) {
