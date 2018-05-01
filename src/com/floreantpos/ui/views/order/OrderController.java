@@ -95,7 +95,7 @@ public class OrderController implements OrderListener, CategorySelectionListener
 				itemQuantity = AutomatedWeightInputDialog.takeDoubleInput(menuItem.getName(), 1);
 			}
 			else {
-				itemQuantity = BasicWeightInputDialog.takeDoubleInput("Please enter item weight or quantity.", 1);
+				itemQuantity = BasicWeightInputDialog.takeDoubleInput("Please enter item weight or quantity..", 1);
 			}
 			if (itemQuantity <= -1) {
 				return;

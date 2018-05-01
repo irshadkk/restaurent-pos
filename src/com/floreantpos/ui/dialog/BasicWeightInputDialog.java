@@ -1,18 +1,15 @@
 /**
  * ************************************************************************
- * * The contents of this file are subject to the MRPL 1.2
- * * (the  "License"),  being   the  Mozilla   Public  License
- * * Version 1.1  with a permitted attribution clause; you may not  use this
- * * file except in compliance with the License. You  may  obtain  a copy of
- * * the License at http://www.floreantpos.org/license.html
- * * Software distributed under the License  is  distributed  on  an "AS IS"
- * * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
- * * License for the specific  language  governing  rights  and  limitations
- * * under the License.
- * * The Original Code is FLOREANT POS.
- * * The Initial Developer of the Original Code is OROCUBE LLC
- * * All portions are Copyright (C) 2015 OROCUBE LLC
- * * All Rights Reserved.
+ * * The contents of this file are subject to the MRPL 1.2 * (the "License"),
+ * being the Mozilla Public License * Version 1.1 with a permitted attribution
+ * clause; you may not use this * file except in compliance with the License.
+ * You may obtain a copy of * the License at
+ * http://www.floreantpos.org/license.html * Software distributed under the
+ * License is distributed on an "AS IS" * basis, WITHOUT WARRANTY OF ANY KIND,
+ * either express or implied. See the * License for the specific language
+ * governing rights and limitations * under the License. * The Original Code is
+ * FLOREANT POS. * The Initial Developer of the Original Code is OROCUBE LLC *
+ * All portions are Copyright (C) 2015 OROCUBE LLC * All Rights Reserved.
  * ************************************************************************
  */
 package com.floreantpos.ui.dialog;
@@ -34,268 +31,277 @@ import com.floreantpos.IconFactory;
 import com.floreantpos.POSConstants;
 import com.floreantpos.swing.PosButton;
 import com.floreantpos.swing.PosUIManager;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 
 public class BasicWeightInputDialog extends OkCancelOptionDialog implements ActionListener {
-	private int defaultValue;
 
-	private JTextField tfNumber;
+    private int defaultValue;
 
-	private boolean floatingPoint;
-	private PosButton btnCancel;
-	private boolean clearPreviousNumber = true;
+    private JTextField tfNumber;
 
-	public BasicWeightInputDialog() {
-		super();
-		init();
-	}
+    private boolean floatingPoint;
+    private PosButton btnCancel;
+    private boolean clearPreviousNumber = true;
 
-	private void init() {
-		//setResizable(false);
-		JPanel contentPane = getContentPanel();
+    public BasicWeightInputDialog() {
+        super();
+        init();
+    }
 
-		Dimension size = PosUIManager.getSize_w100_h70();
+    private void init() {
+        //setResizable(false);
+        JPanel contentPane = getContentPanel();
 
-		MigLayout layout = new MigLayout("", "sg", ""); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-		contentPane.setLayout(layout);
+        Dimension size = PosUIManager.getSize_w100_h70();
 
-		tfNumber = new JTextField();
-		tfNumber.setText(String.valueOf(defaultValue));
-		tfNumber.setFont(tfNumber.getFont().deriveFont(Font.BOLD, PosUIManager.getNumberFieldFontSize()));
-		tfNumber.setFocusable(true);
-		tfNumber.requestFocus();
-		tfNumber.setBackground(Color.WHITE);
+        MigLayout layout = new MigLayout("", "sg", ""); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        contentPane.setLayout(layout);
 
-		contentPane.add(tfNumber, "span, grow"); //$NON-NLS-1$
+        tfNumber = new JTextField();
+        tfNumber.setText(String.valueOf(defaultValue));
+        tfNumber.setFont(tfNumber.getFont().deriveFont(Font.BOLD, PosUIManager.getNumberFieldFontSize()));
+        tfNumber.setFocusable(true);
+        tfNumber.requestFocus();
+        tfNumber.setBackground(Color.WHITE);
+        tfNumber.addActionListener(weightEditerTextBoxEnteraction );
 
-		String[][] numbers = { { "7", "8", "9" }, { "4", "5", "6" }, { "1", "2", "3" }, { ".", "0", "CLEAR ALL" } }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$ //$NON-NLS-7$ //$NON-NLS-8$ //$NON-NLS-9$ //$NON-NLS-10$ //$NON-NLS-11$ //$NON-NLS-12$
-		String[][] iconNames = new String[][] { { "7.png", "8.png", "9.png" }, { "4.png", "5.png", "6.png" }, //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
-				{ "1.png", "2.png", "3.png" }, { "dot.png", "0.png", "" } }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
+        contentPane.add(tfNumber, "span, grow"); //$NON-NLS-1$
 
-		int height = PosUIManager.getSize(55);
-		for (int i = 0; i < numbers.length; i++) {
-			for (int j = 0; j < numbers[i].length; j++) {
-				PosButton posButton = new PosButton();
-				posButton.setFocusable(false);
-				ImageIcon icon = IconFactory.getIcon("/ui_icons/", iconNames[i][j]); //$NON-NLS-1$
-				String buttonText = String.valueOf(numbers[i][j]);
+        String[][] numbers = {{"7", "8", "9"}, {"4", "5", "6"}, {"1", "2", "3"}, {".", "0", "CLEAR ALL"}}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$ //$NON-NLS-7$ //$NON-NLS-8$ //$NON-NLS-9$ //$NON-NLS-10$ //$NON-NLS-11$ //$NON-NLS-12$
+        String[][] iconNames = new String[][]{{"7.png", "8.png", "9.png"}, {"4.png", "5.png", "6.png"}, //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
+        {"1.png", "2.png", "3.png"}, {"dot.png", "0.png", ""}}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$
 
-				if (icon == null) {
-					posButton.setText(buttonText);
-				}
-				else {
-					posButton.setIcon(icon);
-					if (POSConstants.CLEAR_ALL.equals(buttonText)) {
-						posButton.setText("CLEAR ALL");
-					}
-				}
+        int height = PosUIManager.getSize(55);
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                PosButton posButton = new PosButton();
+                posButton.setFocusable(false);
+                ImageIcon icon = IconFactory.getIcon("/ui_icons/", iconNames[i][j]); //$NON-NLS-1$
+                String buttonText = String.valueOf(numbers[i][j]);
 
-				posButton.setActionCommand(buttonText);
-				posButton.addActionListener(this);
-				String constraints = "grow,w " + size.width + "!,h " + size.height + "!"; //$NON-NLS-1$  
-				if (j == numbers[i].length - 1) {
-					constraints += ",wrap"; //$NON-NLS-1$
-				}
-				contentPane.add(posButton, constraints);
-			}
-		}
-	}
+                if (icon == null) {
+                    posButton.setText(buttonText);
+                } else {
+                    posButton.setIcon(icon);
+                    if (POSConstants.CLEAR_ALL.equals(buttonText)) {
+                        posButton.setText("CLEAR ALL");
+                    }
+                }
 
-	@Override
-	public void doOk() {
-		if (!validate(tfNumber.getText())) {
-			POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
-			return;
-		}
-		setCanceled(false);
-		dispose();
-	}
+                posButton.setActionCommand(buttonText);
+                posButton.addActionListener(this);
+                String constraints = "grow,w " + size.width + "!,h " + size.height + "!"; //$NON-NLS-1$  
+                if (j == numbers[i].length - 1) {
+                    constraints += ",wrap"; //$NON-NLS-1$
+                }
+                contentPane.add(posButton, constraints);
+            }
+        }
+    }
 
-	private void doClearAll() {
-		tfNumber.setText(String.valueOf(defaultValue));
-	}
+    @Override
+    public void doOk() {
+        System.out.println("inside ok");
+        if (!validate(tfNumber.getText())) {
+            POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
+            return;
+        }
+        setCanceled(false);
+        dispose();
+    }
+       Action weightEditerTextBoxEnteraction = new AbstractAction() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("inside text enter pressed");
+        if (!validate(tfNumber.getText())) {
+//            POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
+            return;
+        }
+        setCanceled(false);
+        dispose();
+        }
+    };
 
-	private void doInsertNumber(String number) {
+    private void doClearAll() {
+        tfNumber.setText(String.valueOf(defaultValue));
+    }
 
-		if (clearPreviousNumber) {
-			tfNumber.setText("0"); //$NON-NLS-1$
-			clearPreviousNumber = false;
-		}
+    private void doInsertNumber(String number) {
 
-		String s = tfNumber.getText();
-		double d = 0;
+        if (clearPreviousNumber) {
+            tfNumber.setText("0"); //$NON-NLS-1$
+            clearPreviousNumber = false;
+        }
 
-		try {
-			d = Double.parseDouble(s);
-		} catch (Exception x) {
-		}
+        String s = tfNumber.getText();
+        double d = 0;
 
-		if (d == 0 && !s.contains(".")) {
-			tfNumber.setText(number);
-			return;
-		}
+        try {
+            d = Double.parseDouble(s);
+        } catch (Exception x) {
+        }
 
-		s = s + number;
-		if (!validate(s)) {
-			POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
-			return;
-		}
-		tfNumber.setText(s);
-	}
+        if (d == 0 && !s.contains(".")) {
+            tfNumber.setText(number);
+            return;
+        }
 
-	private void doInsertDot() {
-		//if (isFloatingPoint() && tfNumber.getText().indexOf('.') < 0) {
-		String string = tfNumber.getText() + "."; //$NON-NLS-1$
-		if (!validate(string)) {
-			POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
-			return;
-		}
-		tfNumber.setText(string);
-		//}
-	}
+        s = s + number;
+        if (!validate(s)) {
+            POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
+            return;
+        }
+        tfNumber.setText(s);
+    }
 
-	public void actionPerformed(ActionEvent e) {
-		String actionCommand = e.getActionCommand();
+    private void doInsertDot() {
+        //if (isFloatingPoint() && tfNumber.getText().indexOf('.') < 0) {
+        String string = tfNumber.getText() + "."; //$NON-NLS-1$
+        if (!validate(string)) {
+            POSMessageDialog.showError(this, POSConstants.INVALID_NUMBER);
+            return;
+        }
+        tfNumber.setText(string);
+        //}
+    }
 
-		if (POSConstants.CANCEL.equalsIgnoreCase(actionCommand)) {
-			doCancel();
-		}
-		else if (POSConstants.OK.equalsIgnoreCase(actionCommand)) {
-			doOk();
-		}
-		else if (actionCommand.equals(POSConstants.CLEAR_ALL)) {
-			doClearAll();
-		}
-		else if (actionCommand.equals(".")) { //$NON-NLS-1$
-			doInsertDot();
-		}
-		else {
-			doInsertNumber(actionCommand);
-		}
-	}
+    public void actionPerformed(ActionEvent e) {
+        String actionCommand = e.getActionCommand();
 
-	private boolean validate(String str) {
-		if (isFloatingPoint()) {
-			try {
-				Double.parseDouble(str);
-			} catch (Exception x) {
-				return false;
-			}
-		}
-		else {
-			try {
-				Integer.parseInt(str);
-			} catch (Exception x) {
-				return false;
-			}
-		}
-		return true;
-	}
+        if (POSConstants.CANCEL.equalsIgnoreCase(actionCommand)) {
+            doCancel();
+        } else if (POSConstants.OK.equalsIgnoreCase(actionCommand)) {
+            doOk();
+        } else if (actionCommand.equals(POSConstants.CLEAR_ALL)) {
+            doClearAll();
+        } else if (actionCommand.equals(".")) { //$NON-NLS-1$
+            doInsertDot();
+        } else {
+            doInsertNumber(actionCommand);
+        }
+    }
 
-	public void setTitle(String title) {
-		super.setTitle(title);
-		super.setTitlePaneText(title);
-	}
+    private boolean validate(String str) {
+        if (isFloatingPoint()) {
+            try {
+                Double.parseDouble(str);
+            } catch (Exception x) {
+                return false;
+            }
+        } else {
+            try {
+                Integer.parseInt(str);
+            } catch (Exception x) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-	public void setDialogTitle(String title) {
-		super.setTitle(title);
-	}
+    public void setTitle(String title) {
+        super.setTitle(title);
+        super.setTitlePaneText(title);
+    }
 
-	public double getValue() {
-		return Double.parseDouble(tfNumber.getText());
-	}
+    public void setDialogTitle(String title) {
+        super.setTitle(title);
+    }
 
-	public void setValue(double value) {
-		if (value == 0) {
-			tfNumber.setText("0"); //$NON-NLS-1$
-		}
-		else if (isFloatingPoint()) {
-			tfNumber.setText(String.valueOf(value));
-		}
-		else {
-			tfNumber.setText(String.valueOf((int) value));
-		}
-	}
+    public double getValue() {
+        return Double.parseDouble(tfNumber.getText());
+    }
 
-	public boolean isFloatingPoint() {
-		return floatingPoint;
-	}
+    public void setValue(double value) {
+        if (value == 0) {
+            tfNumber.setText("0"); //$NON-NLS-1$
+        } else if (isFloatingPoint()) {
+            tfNumber.setText(String.valueOf(value));
+        } else {
+            tfNumber.setText(String.valueOf((int) value));
+        }
+    }
 
-	public void setFloatingPoint(boolean decimalAllowed) {
-		this.floatingPoint = decimalAllowed;
-	}
+    public boolean isFloatingPoint() {
+        return floatingPoint;
+    }
 
-	public static void main(String[] args) {
-		BasicWeightInputDialog dialog2 = new BasicWeightInputDialog();
-		dialog2.pack();
-		dialog2.setVisible(true);
-	}
+    public void setFloatingPoint(boolean decimalAllowed) {
+        this.floatingPoint = decimalAllowed;
+    }
 
-	public int getDefaultValue() {
-		return defaultValue;
-	}
+    public static void main(String[] args) {
+        BasicWeightInputDialog dialog2 = new BasicWeightInputDialog();
+        dialog2.pack();
+        dialog2.setVisible(true);
+    }
 
-	public void setDefaultValue(int defaultValue) {
-		this.defaultValue = defaultValue;
-		tfNumber.setText(String.valueOf(defaultValue));
-	}
+    public int getDefaultValue() {
+        return defaultValue;
+    }
 
-	public static int takeIntInput(String title) {
-		BasicWeightInputDialog dialog = new BasicWeightInputDialog();
-		dialog.setTitle(title);
-		dialog.pack();
-		dialog.open();
+    public void setDefaultValue(int defaultValue) {
+        this.defaultValue = defaultValue;
+        tfNumber.setText(String.valueOf(defaultValue));
+    }
 
-		if (dialog.isCanceled()) {
-			return -1;
-		}
+    public static int takeIntInput(String title) {
+        BasicWeightInputDialog dialog = new BasicWeightInputDialog();
+        dialog.setTitle(title);
+        dialog.pack();
+        dialog.open();
 
-		return (int) dialog.getValue();
-	}
+        if (dialog.isCanceled()) {
+            return -1;
+        }
 
-	public static double takeDoubleInput(String title, String dialogTitle, double initialAmount) {
-		BasicWeightInputDialog dialog = new BasicWeightInputDialog();
-		dialog.setFloatingPoint(true);
-		dialog.setValue(initialAmount);
-		dialog.setTitle(title);
-		dialog.setDialogTitle(dialogTitle);
-		dialog.pack();
-		dialog.open();
+        return (int) dialog.getValue();
+    }
 
-		if (dialog.isCanceled()) {
-			return Double.NaN;
-		}
+    public static double takeDoubleInput(String title, String dialogTitle, double initialAmount) {
+        BasicWeightInputDialog dialog = new BasicWeightInputDialog();
+        dialog.setFloatingPoint(true);
+        dialog.setValue(initialAmount);
+        dialog.setTitle(title);
+        dialog.setDialogTitle(dialogTitle);
+        dialog.pack();
+        dialog.open();
 
-		return dialog.getValue();
-	}
+        if (dialog.isCanceled()) {
+            return Double.NaN;
+        }
 
-	public static double takeDoubleInput(String title, double initialAmount) {
-		BasicWeightInputDialog dialog = new BasicWeightInputDialog();
-		dialog.setFloatingPoint(true);
-		dialog.setTitle(title);
-		dialog.setValue(initialAmount);
-		dialog.pack();
-		dialog.open();
+        return dialog.getValue();
+    }
 
-		if (dialog.isCanceled()) {
-			return -1;
-		}
+    public static double takeDoubleInput(String title, double initialAmount) {
+        BasicWeightInputDialog dialog = new BasicWeightInputDialog();
+        dialog.setFloatingPoint(true);
+        dialog.setTitle(title);
+        dialog.setValue(initialAmount);
+        dialog.pack();
+        dialog.open();
 
-		return dialog.getValue();
-	}
+        if (dialog.isCanceled()) {
+            return -1;
+        }
 
-	public static double show(Component parent, String title, double initialAmount) {
-		BasicWeightInputDialog dialog2 = new BasicWeightInputDialog();
-		dialog2.setFloatingPoint(true);
-		dialog2.setTitle(title);
-		dialog2.pack();
-		dialog2.setLocationRelativeTo(parent);
-		dialog2.setValue(initialAmount);
-		dialog2.setVisible(true);
+        return dialog.getValue();
+    }
 
-		if (dialog2.isCanceled()) {
-			return Double.NaN;
-		}
+    public static double show(Component parent, String title, double initialAmount) {
+        BasicWeightInputDialog dialog2 = new BasicWeightInputDialog();
+        dialog2.setFloatingPoint(true);
+        dialog2.setTitle(title);
+        dialog2.pack();
+        dialog2.setLocationRelativeTo(parent);
+        dialog2.setValue(initialAmount);
+        dialog2.setVisible(true);
 
-		return dialog2.getValue();
-	}
+        if (dialog2.isCanceled()) {
+            return Double.NaN;
+        }
+
+        return dialog2.getValue();
+    }
 }

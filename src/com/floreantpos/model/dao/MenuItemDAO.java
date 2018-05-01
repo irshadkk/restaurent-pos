@@ -333,6 +333,39 @@ public class MenuItemDAO extends BaseMenuItemDAO {
 			closeSession(session);
 		}
 	}
+        
+        public MenuItem getMenuItemByName(String name) {
+		Session session = null;
+		Criteria criteria = null;
+		try {
+			session = createNewSession();
+			criteria = session.createCriteria(MenuItem.class);
+			criteria.add(Restrictions.like(MenuItem.PROP_NAME, name));
+			List<MenuItem> result = criteria.list();
+			if (result == null || result.isEmpty()) {
+				return null;
+			}
+			return (MenuItem) result.get(0);
+		} finally {
+			closeSession(session);
+		}
+	}
+        public MenuItem getMenuItemByNameOrItsSubstring(String name) {
+		Session session = null;
+		Criteria criteria = null;
+		try {
+			session = createNewSession();
+			criteria = session.createCriteria(MenuItem.class);
+			criteria.add(Restrictions.ilike(MenuItem.PROP_NAME, name, MatchMode.ANYWHERE));
+			List<MenuItem> result = criteria.list();
+			if (result == null || result.isEmpty()) {
+				return null;
+			}
+			return (MenuItem) result.get(0);
+		} finally {
+			closeSession(session);
+		}
+	}
 
 	public List<MenuItem> getPizzaItems() {
 		Session session = null;
